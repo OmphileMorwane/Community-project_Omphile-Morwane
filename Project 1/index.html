@@ -1,57 +1,46 @@
-<!DOCTYPE html>
+<!DOC<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAMOTLATSI TAXI's</title>
+    <title>Taxi Dispatch App</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css" />
-    <link rel="stylesheet" href="./assets/css/theme.css" />
-    <link rel="stylesheet" href="./assets/css/loopple/loopple.css" />
     <style>
-      @import url("https://fonts.google.com/share?selection.family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+      /* Additional styles can be added here */
     </style>
   </head>
-
-  <body class="bg-black text-white">
-    <header>
-      <h1 class="text-3xl font-bold font-kanit">MAMOTLATSI TAXIBOOST</h1>
-    </header>
-
-    <nav class="container px-4 sm:px-6 lg:px-8 bg-gray-600">
-      <ul
-        class="relative flex flex-wrap items-center justify-between w-full shrink-0 py-7"
+  <body class="bg-gray-200">
+    <div class="container mx-auto py-10">
+      <h1 class="text-3xl font-bold mb-6">TaxiBoost App</h1>
+      <button
+        id="requestButton"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
-        <li class="hover-pink"><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to our phone app!</p>
-      </section>
+        Request Taxi
+      </button>
+    </div>
 
-      <section id="about">
-        <h2>About</h2>
-        <p>This app helps you manage your tasks and stay organized.</p>
-      </section>
+    <script>
+      const requestButton = document.getElementById("requestButton");
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Contact us at contact@example.com</p>
-      </section>
-    </main>
+      requestButton.addEventListener("click", () => {
+        requestTaxi();
+      });
 
-    <footer>
-      <p>&copy; 2024 My Phone App</p>
-    </footer>
+      function requestTaxi() {
+        // Simulate sending request to taxi driver
+        // Here, you would send a request to the driver's device or server
+        // For the sake of example, let's assume the driver is notified instantly
+        alert("Taxi request received!");
 
-    <script src="script.js"></script>
-    <!-- External JavaScript file for interactivity -->
+        // Simulate passenger getting into the taxi
+        setTimeout(() => {
+          alert("Passenger has entered the taxi. Ride started.");
+        }, 5000); // 5000 milliseconds = 5 seconds
+      }
+    </script>
   </body>
 </html>
